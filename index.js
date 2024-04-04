@@ -97,10 +97,7 @@ const atualizarLista = (participantes) => {
   let output = ""
   for(let participante of participantes) {
     output = output + criarNovoParticipante(participante)
-      
   }
-  console.log(output)
-
   document.querySelector('tbody').innerHTML = output
 }
 
@@ -142,8 +139,6 @@ const fazerCheckIn = (event) => {
   if(confirm(mensagemConfirmacao) == false) {
     return
   }
-
-  alert(resultado)
   
   const participante = participantes.find((p) => {
     return p.email == event.target.dataset.email
